@@ -291,7 +291,7 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 
 
 var port=process.env.port || 3000;// process.env.port is useful while hosting as it will assign an available port to the app
-app.listen(3000,function(){
+app.listen(port,function(){
 	console.log("Server started...");
 
 });
