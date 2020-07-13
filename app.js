@@ -21,7 +21,7 @@ var commentRoutes    = 	require("./routes/comments"),
 //Seed the database
 //seedDB();
 //mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true});
-mongoose.connect("mongodb+srv://kenils:Kenil@1999@mongocloud.pxy9n.mongodb.net/<dbname>?retryWrites=true&w=majority",{useNewUrlParser: true})
+mongoose.connect("mongodb+srv://kenils:Kenil@1999@mongocloud.pxy9n.mongodb.net/yelp_camp?retryWrites=true&w=majority",{useNewUrlParser: true})
 //const MongoClient = require('mongodb').MongoClient;
 //const uri = "mongodb+srv://kenils:Kenil@1999@mongocloud.pxy9n.mongodb.net/<dbname>?retryWrites=true&w=majority";
 //const client = new MongoClient(uri, { useNewUrlParser: true });
