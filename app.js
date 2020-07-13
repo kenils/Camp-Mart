@@ -20,7 +20,25 @@ var commentRoutes    = 	require("./routes/comments"),
 
 //Seed the database
 //seedDB();
-mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true});
+//mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://kenils:Kenil@1999@mongocloud.pxy9n.mongodb.net/<dbname>?retryWrites=true&w=majority",{useNewUrlParser: true})
+//const MongoClient = require('mongodb').MongoClient;
+//const uri = "mongodb+srv://kenils:Kenil@1999@mongocloud.pxy9n.mongodb.net/<dbname>?retryWrites=true&w=majority";
+//const client = new MongoClient(uri, { useNewUrlParser: true });
+//client.connect(err => {
+  //const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  //client.close();
+//});
+
+
+
+
+
+
+
+
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
