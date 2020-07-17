@@ -21,7 +21,7 @@ var commentRoutes    = 	require("./routes/comments"),
 //Seed the database
 //seedDB();
 //mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true});
-//mongoose.connect("mongodb+srv://kenils:Kenil@1999@mongocloud.pxy9n.mongodb.net/yelp_camp?retryWrites=true&w=majority",{useNewUrlParser: true})
+//mongoose.connect("mongodb+srv://<username>:<pass>@mongocloud.pxy9n.mongodb.net/yelp_camp?retryWrites=true&w=majority",{useNewUrlParser: true}) --Original URL configured on server.
 var url=process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
 mongoose.connect(url,{useNewUrlParser:true});
 
@@ -32,6 +32,8 @@ app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public")); //__dirname represents the current directory
 app.use(methodOverride("_method"));
 app.use(flash());
+
+ app.locals.moment =    require('moment');
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({
