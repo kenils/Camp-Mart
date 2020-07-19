@@ -8,6 +8,7 @@ This is a full fledged website to get information about various campgrounds uplo
 3.) User Profile: A Dashboard for Users to get information about a User and his uploaded posts
 4.) Password Reset Feature via email verification
 5.) Feature to add and upload images from local system which will be stored on Cloudinary Cloud Storage.
+6.) An Admin Feature who will have the ownership access to all posts and comments.(Only configurable through Backend for security reasons)
 
 
 
