@@ -13,10 +13,10 @@ This is a full fledged website to get information about various campgrounds uplo
 
 #Steps to Run the project locally:
 
-================================================================
+
+
 NOTE: WEBSITE WILL NOT RUN WITHOUT INSTALLING MONGODB AND NODEJS   
 
-================================================================
 
 The whole list of dependancies can be found in the package.json file
 
