@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 var express= require("express");
 var router= express.Router();
 var Campground = require("../models/campground");
@@ -143,8 +143,9 @@ router.put("/:id",upload.single('image'),middleware.checkCampgroundOwnership ,fu
 						return res.redirect("back");
 					}	
 				}
-			campground.name=req.body.name;
-			campground.description=req.body.description;
+			campground.name=req.body.campground.name;
+			campground.description=req.body.campground.description;
+			campground.price=req.body.campground.price
 			campground.save();
 			req.flash("success","Successfully Updated !");
 			res.redirect("/campgrounds/"+req.params.id);
