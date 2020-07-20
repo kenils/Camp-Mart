@@ -30,7 +30,7 @@ router.post("/register",function(req,res){
 }
 		else{
 			passport.authenticate("local")(req,res,function(){
-				req.flash("success","Welcome to Yelp Camp "+user.username);
+				req.flash("success","Welcome to Camp Mart "+user.firstName);
 				res.redirect("/campgrounds");
 			});
 		}
@@ -109,7 +109,7 @@ router.post("/forgot",function(req,res,next){
 			var mailOptions = {
 				to: user.email,
 				from: process.env.EMLID,
-				subject: "Yelp Camp Password Reset",
+				subject: "Camp Mart Password Reset",
 				text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
           'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
           'http://' + req.headers.host + '/reset/' + token + '\n\n' +
